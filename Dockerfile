@@ -1,4 +1,5 @@
 FROM centos
+RUN rpm -Uvh http://download.fedoraproject.org/pub/epel/6/i386/epel-release-6-8.noarch.rpm
 RUN yum install -y git gcc tar openssl-devel gcc-c++ readline-devel sqlite-devel
 RUN git clone https://github.com/sstephenson/rbenv.git ~/.rbenv
 RUN mkdir -p ~/.rbenv/plugins && git clone https://github.com/sstephenson/ruby-build.git ~/.rbenv/plugins/ruby-build
